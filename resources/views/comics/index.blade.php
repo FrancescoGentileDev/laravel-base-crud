@@ -1,4 +1,4 @@
-
+@extends('layoutMain')
 
 @section('title')
     Comics
