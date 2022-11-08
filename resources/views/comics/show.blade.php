@@ -12,9 +12,10 @@
     {{$comic->description}}</p>
     ${{$comic->price}}
 
-<form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="POST">
+<input type="button" id="deleteButton" value="DELETE">
+<form action="{{route('comics.destroy', ['comic'=> $comic->id])}}" method="POST" id="deleteForm">
     @csrf
     @method('DELETE')
-    <input type="submit" value="Delete">
 </form>
+
 @endsection

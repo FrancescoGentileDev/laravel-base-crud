@@ -10,3 +10,15 @@
     @yield("content")
 </body>
 </html>
+
+
+<script>
+    const deleteButton = document.getElementById("deleteButton");
+    deleteButton.addEventListener("click", function(){
+        const confirm = window.confirm("Are you sure?");
+        if(confirm){
+            const form = document.getElementById("deleteForm");
+            form.submit();
+        }
+    });
+</script>
