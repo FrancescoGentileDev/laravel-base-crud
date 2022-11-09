@@ -8,7 +8,7 @@
 @section('content')
     <h1>EDIT: {{ $comic->title }}</h1>
 
-    <form action="{{ route('comics.edit', $comic->id) }}" method="POST">
+    <form action="{{ route('comics.update', $comic->id) }}" method="POST">
         @csrf
         @method('PUT')
         <div>
@@ -17,7 +17,8 @@
         </div>
         <div>
             <label for="description">Description</label>
-            <textarea name="description" id="description" cols="30" rows="10">{{ old('description', $comic->title) }}</textarea>
+            <textarea name="description" id="description"  cols="30"
+            rows="10">{{ old('description', $comic->description) }}</textarea>
         </div>
         <div>
             <label for="thumb">Thumb</label>
